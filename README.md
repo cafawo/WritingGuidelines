@@ -136,8 +136,8 @@ If you use the LaTeX template, you do not have to worry about page margins and f
 
 If you save these three files into a folder, you can open template.tex in a TeX editor and get started. If you have not used LaTeX so far, consider the following options:
 
-Online version: [Overleaf](https://www.overleaf.com/)
-Local installation: [MiKTeX](https://miktex.org/download)
+* Online version: [Overleaf](https://www.overleaf.com/)
+* Local installation: [MiKTeX](https://miktex.org/download)
 
 
 ## Time management
