@@ -1,6 +1,6 @@
-![head.png](figures/head.jpg)
+![head.png](https://github.com/cafawo/FinancialDataAnalytics/blob/master/figures/head.jpg?raw=1)
 
-# Guidelines for Writing Master/Bachelor/Seminar Thesis
+# Guidelines for writing a Master/Bachelor/Seminar Thesis
 
 **Prof. Dr. Fabian Woebbeking**</br>
 Assistant Professor of Financial Economics
