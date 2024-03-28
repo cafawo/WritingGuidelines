@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2cm,right=3cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{chronology}
+\usepackage{tikz}
+\usepackage[bf,nooneline]{caption}
+\usepackage{datetime}
+
+
+\usepackage{natbib} % package for citation (\citet; \citep)
+\bibpunct{(}{)}{;}{a}{,}{,} % punctuation and brackets for citation
+
+\usepackage[hyphens]{url}  %supporting URL readability and breaks
+\usepackage[colorlinks=true]{hyperref}  % activate ref and link "hidelinks"
+
+\usepackage{setspace} % package for setting line spacing
+\onehalfspacing % set one-and-a-half spacing for the document text
+
+\newdateformat{monthyeardate}{% 
+\monthname[\THEMONTH], \THEYEAR}
+
+
+\author{Fabian Woebbeking (Supervisor)\thanks{\href{mailtofabian.woebbeking@iwh-halle.de}{fabian.woebbeking@iwh-halle.de}}}
+\title{
+This is not a title\thanks{Please extract the exact title from the certificate issued by the examination office or during the kick-off session of your seminar.}
+}
+\date{Martin-Luther-University Halle-Wittenberg, \monthyeardate\today}
+
+
+\begin{document}
+
+% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adjust the title page as needed, see: https://pruefungsamt.wiwi.uni-halle.de/abschlussarbeiten/
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=\linewidth]{template.png}\\
+Faculty of Law, Economics and Business\\
+Department of Economics\\
+Chair of Financial Economics\\
+\vspace{40pt}
+\Large\textbf{Your Title Here}\\
+\vspace{40pt}
+\normalsize
+Scientific thesis to obtain the academic degree\\
+\textbf{Bachelor of Science}\\
+at Martin-Luther-University Halle-Wittenberg\\
+\end{center}
+\vfill
+\begin{flushleft}
+\normalsize
+Submitted by: \textbf{Mustermann, Max}\\
+Matriculation No.: \textbf{123456789}\\
+Study program: \textbf{B.Sc. Economics and Management}\\
+Examiner: \textbf{Jun.-Prof. Dr. Fabian Wöbbeking}\\
+Submitted on: \textbf{\today}
+\end{flushleft}
+\end{titlepage}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Some ``useful'' links}
+\begin{itemize}
+\item \href{https://pruefungsamt.wiwi.uni-halle.de/abschlussarbeiten/}{Administrative stuff}
+\item \href{https://bibliothek.uni-halle.de/dbib/}{E-Resources}
+\item \href{http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1540-6261}{How a good article looks like... (Journal of Finance)}
+\end{itemize}
+\vspace{.25cm}
+\noindent \LaTeX:
+\begin{itemize}
+\item \href{http://tex.stackexchange.com/questions/41808/how-do-i-install-tex-latex-on-windows-7}{HowToLatex(Windows)}
+\item \href{http://tex.stackexchange.com/questions/220/i-want-to-start-using-latex-on-mac-os-x-where-do-i-start}{HowToLatex(Mac)}
+\item \href{http://www.xm1math.net/texmaker/}{TeXMaker(Editor)}
+\end{itemize}
+\vspace{.25cm}
+\noindent R and Python:
+\begin{itemize}
+\item \href{https://www.python.org/}{Python download}
+\item \href{https://developers.google.com/edu/python/}{Google's Python class}
+\item \href{https://www.r-project.org/}{R download}
+\item \href{http://stackexchange.com/}{StackExchange (help)}
+\end{itemize}
+
+\section{Typesetting with References and Citations}
+Lorem ipsum \citet{modigliani1958cost} dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua (see timeline in Figure~\ref{fig:timeline}).
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat \citep{bachelier1900theorie}.
+
+\section{Some other things that \LaTeX \ can do for you}
+\subsection{Math!}
+\begin{align}
+\mathbb{E}\left[ \sum_{i=1}^N \sum_{j=1}^N x_{ij} \right] = \sum_{i=1}^N \sum_{j=1}^N \frac{p_{ij}}{\lambda_{ij}}= L
+\end{align}
+
+\subsection{Timelines}
+
+\begin{figure}[htpb]
+\centering
+\begin{chronology}*[5]{1983}{2010}{\the\textwidth}
+\event{1984}{event one}
+\event[1985]{1993}{\color{blue}event two}
+\event{\decimaldate{25}{12}{2001}}{event three}
+\end{chronology}
+\caption{\textbf{This is an interesting timeline.} This figure displays...}\label{fig:timeline}
+\end{figure}
+
+\subsection{Graphs}
+
+%---------------------------------------------------------------------------------------
+%% Cash flow of a structured product
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node/.style={coordinate}]
+
+%%%coordinate system
+\draw [->] (0,0)--(0,10);
+\draw [->] (0,0)--(10,0);
+
+\draw [black, thin, dashed] (3,0)--(3,6);
+\draw [black, thin, dashed] (7,0)--(7,2);
+\draw [black, thin, dashed] (0,6)--(3,6);
+
+% Options
+\draw [black, thick, solid] (0,9)--(3,6);
+\draw [black, thick, solid] (0,3)--(3,6);
+
+%%%client CF view
+%\draw [black, thin]  (0,9)--(10,9);
+\draw [blue, ultra thick] (0,2)--(3,2);
+\draw [blue, ultra thick] (7,2)--(10,2);
+\draw [blue, ultra thick] (3,6)--(7,2);
+
+%%%labels
+\draw (7,0)--(10,0) node [right, below, align=center]{6m Euribor};
+\draw (0,9)--(0,10) node [right, left, align=center]{Client \\ Rate \\ (PAY)};
+\draw (0,6)--(0,6) node [midway, left, align=center]{-2,45\%};
+\draw (0,2)--(0,2) node [midway, left, align=center]{-5\%};
+\draw (3,0)--(3,0) node [midway, below]{1.9\%};
+\draw (7,0)--(7,0) node [midway, below]{4.35\%};
+
+%% ANNOTATIONS
+%\draw (5, 4) node[right] {\tiny Floor (L)};
+\node [above right, scale=.7, rotate=-45] at (1,8) {Floor (long)};
+\node [above right, scale=.7, rotate=45] at (1,4) {Floor (short)};
+\node [above right, scale=.7, rotate=90] at (3,3) {Digital (short)};
+
+\end{tikzpicture}
+\caption{\textbf{This is another interesting Figure.} It describes a trading strategy.}
+\end{figure}
+
+\bibliographystyle{plainnat}
+\bibliography{template}
+
+\clearpage
+\appendix
+\section{Eigenständigkeitserklärung}
+Ich erkläre hiermit, dass ich die vorliegende Abschlussarbeit selbstständig und ohne unzulässige fremde Hilfe und unter Beachtung der allgemeinen Grundsätze guter wis-senschaftlicher Praxis verfasst sowie keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Alle Stellen, die wörtlich oder sinngemäß aus den benutzten Quellen entnommen wurden, sind als solche kenntlich gemacht worden. Ich versichere zudem, dass die vorliegende Abschlussarbeit in gleicher oder ähnlicher Form noch nicht in diesem oder einem anderen Studiengang als Prüfungsleistung vorgelegt und/oder veröffentlicht worden ist.\vspace{2cm}
+
+
+
+\noindent Ort, Datum, Unterschrift Verfasser/in
+
+\end{document}
