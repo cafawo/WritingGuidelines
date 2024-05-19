@@ -140,6 +140,16 @@ If you save these three files into a folder, you can open template.tex in a TeX 
 * Local installation: [MiKTeX](https://miktex.org/download)
 
 
+## Permissible use of AI
+
+The conditional integration of artificial intelligence (AI) into the scientific process aims to equip students with the necessary competencies for the effective, responsible, and secure employment of these technologies. The overarching goal is to cultivate a heightened understanding of AI's capabilities and limitations within both scientific and commercial domains. Transparency, a cornerstone of scientific inquiry, mandates that the deployment of AI tools be thoroughly documented. This includes a rigorous assessment of the advantages these tools confer upon the research process. For instance, while AI provides great support for coding, it is not capable to observe the most current state of academic literature (not least because this data might not be available to the system). AI generated literature reviews are therefore often incomplete.
+
+The selection and application of AI tools are considered integral to the students' academic performance and must be transparently declared. Academic theses will be assessed based on the content quality and the judicious use of AI, recognizing that the responsibility for any potential inaccuracies in information, sources, or analytical outcomes rests with the students.
+
+**In adherence to principles of academic integrity, the use of AI must be explicitly documented in the declaration of independence accompanying academic submissions.**
+
+
+
 ## Time management
 
 We recommend that you prepare a time schedule for your thesis from registration to submission. Through regular reviews of your schedule, you will get an idea, for example, of when you should stop researching your topic and start writing.
