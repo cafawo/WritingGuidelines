@@ -1,0 +1,145 @@
+\documentclass[aspectratio=169]{beamer}  % Use \documentclass[aspectratio=169, handout]{beamer} to remove \pause
+\usetheme{Madrid} % Choose your favorite theme (Madrid, Goettingen):  https://hartwork.org/beamer-theme-matrix/
+\usecolortheme{dolphin} %Overview: https://hartwork.org/beamer-theme-matrix/
+\useinnertheme{rectangles}
+\setbeamercovered{transparent}
+
+% Packages
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{{../figures}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\aba}[1]{\textcolor{red}{\textit{$<$Makrele$>$}#1$<>$}}
+\providecommand{\sas}[1]{\textcolor{blue}{\textit{$<$Makrele$>$}#1$<>$}}
+\providecommand{\mwg}[1]{\textcolor{pink}{\textit{$<$Makrele$>$}#1$<>$}}
+\providecommand{\fwg}[1]{\textcolor{magenta}{\textit{$<$Makrele$>$}#1$<>$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% Title page setup
+\title[Title short]{Title}  %[Short title]{Title}
+\author[Presenting author short]{\textbf{Presenting author}\\Joint work with ... coauthors}  %[Presenting author]{Authors}
+
+\institute[]{Presented at}
+
+\date{February 18\textsuperscript{th}, 2025}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+% ----------------------------------------------------------------------
+\section{Introduction}
+% ----------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------
+\begin{frame}{Motivation}
+%Content goes here
+\citet{barth2023let}
+\end{frame}
+
+
+% ----------------------------------------------------------------------
+\begin{frame}{Itemize and enumerate}
+% Itemize
+\begin{itemize}
+    \item ...
+    \item ...
+    \begin{itemize}
+        \item ...
+        \item ...
+        \begin{itemize}
+            \item ...
+            \item ...
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+% Enumerate
+\begin{enumerate}
+    \item ...
+    \item ...
+    \item ...
+    \item ...
+\end{enumerate}
+\end{frame}
+
+
+% ----------------------------------------------------------------------
+\begin{frame}[label=links]{Links}
+% Link
+\begin{itemize}
+    \item You can create links between slides, e.g. \hyperlink{descriptives}{\beamergotobutton{Descriptive statistics}}
+    \item Please note the label tag in the slide header
+\end{itemize}
+\end{frame}
+
+
+% ----------------------------------------------------------------------
+\begin{frame}{Pause}
+% Link
+\begin{itemize}
+    \item Shift focus by `pausing' the slide, e.g.:
+    \bigskip\pause
+    \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    \bigskip\pause
+    \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{itemize}
+\end{frame}
+
+
+% ----------------------------------------------------------------------
+\section{Conclusion}
+% ----------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------
+\begin{frame}{Conclusion}
+% Content
+\end{frame}
+
+
+
+% ----------------------------------------------------------------------
+\section{Appendix and references}
+% ----------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------
+\begin{frame}[label=descriptives]{Descriptive statistics \hyperlink{links}{\beamerreturnbutton{Back}}}
+    \begin{table}
+        \centering
+        \begin{tabular}{lrrrrrr}
+            \toprule
+            & \textbf{Mean} & \textbf{Sd} & \textbf{1\%} & \textbf{50\%} & \textbf{90\%} & \textbf{N} \\
+            \midrule
+            LTV            & 74.2 & 29.9 & 0.7 & 77.5 & 146.0 & 1,041,351 \\
+            Ln Balance     & 11.6 & 0.9  & 9.2 & 11.7 & 13.3  & 1,041,351 \\
+            Ln Valuation   & 12.0 & 1.0  & 9.5 & 12.0 & 15.1  & 1,041,351 \\
+            Loan Term      & 291.1 & 124.3 & 60.0 & 300.0 & 582.0 & 1,041,351 \\
+            Interest Rate  & 2.5 & 11.4 & 0.0 & 2.0 & 5.8 & 1,041,351 \\
+            Re Mortgage    & 0.2 & 0.4 & 0.0 & 0.0 & 1.0 & 1,041,351 \\
+            Stickiness     & 3.5 & 1.5 & 1.7 & 3.5 & 7.7 & 1,041,351 \\
+            Balance        & 201.5 & 1298.6 & 10.0 & 115.6 & 617.0 & 1,041,351 \\
+            Valuation      & 393.9 & 21096.8 & 13.2 & 170.0 & 3560.0 & 1,041,351 \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+% ----------------------------------------------------------------------
+\begin{frame}[allowframebreaks]{References}
+    \bibliographystyle{plainnat}
+    \bibliography{template}
+\end{frame}
+
+
+\end{document}
