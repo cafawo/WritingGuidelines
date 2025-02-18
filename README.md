@@ -18,7 +18,7 @@ Link: [https://github.com/cafawo/WritingGuidelines](https://github.com/cafawo/Wr
 ```bash
 WritingGuidelines/  # This repository
 ├── slides/
-│   ├── beamertemplate.tex  # Presentation template
+│   └── beamertemplate.tex  # Presentation template
 ├── template.tex  # LaTeX template
 ├── template.bib  # Bibliography template
 ├── template.png  # MLU template header
